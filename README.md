@@ -3,6 +3,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## About
 This is a simple TODO list application that allows users to add a task and it would be displayed on the screen. On completion of the task, the user can mark it as complete and it will be removed from the screen.
 
+![Screenshot of TODO App](public/TODO_App.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
