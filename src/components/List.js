@@ -10,6 +10,14 @@ class List extends Component {
             list: [],
             task: ''
         }
+
+        this.inputRef = React.createRef();
+    }
+
+    componentDidMount = () => {
+        if (this.inputRef) {
+            this.inputRef.current.focus();
+        }
     }
 
     updateInput = (key, value) => {
@@ -64,10 +72,10 @@ class List extends Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <h1>Your TODO List</h1>
 
-                <input type="text" placeholder="Type task here..." 
+                <input type="text" placeholder="Type task here..." ref={this.inputRef}
                     value={this.state.task}
                     onChange={event => this.updateInput("task", event.target.value)} />
                 
@@ -83,7 +91,7 @@ class List extends Component {
                         </ul>
                     )
                 })}
-            </div>
+            </React.Fragment>
         )
     }
 }
